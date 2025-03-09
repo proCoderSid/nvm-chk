@@ -2,10 +2,10 @@
 
 This JavaScript script automates the process of checking and managing Node.js versions based on specific conditions:
 
-1. **Check Current Node.js Version:**
-   - The script begins by checking the currently installed Node.js version on your system.
-
-2. **Comparison with Required Version from `.nvmrc` File:**
+1. **Check NVM is available or not**
+   - The script begins by checking the currently NVM on your system.
+   
+2. **Comparison Current version with Required Version from `.nvmrc` File:**
    - If the currently installed Node.js version matches the required version, the script logs a success message and terminates.
 
 3. **Using Node Version from `.nvmrc` File:**
@@ -30,15 +30,19 @@ You can use this file in `package.json` file as follow or as you feel comfortabl
 ```
 {
     "scripts": {
-        "prestart": "node nvm-chk.js",
-        "start": "Your start command"
+        "nvm-chk": "node nvm-chk.js"
+        "prepare: "npm run nvm-chk",
+        "prestart": "npm run nvm-chk",
+        "start": "Your start command",
+        "anyOther": "npm run nvm-chk && Your Command"
     }
 }
 ```
 
-I have tested this script in node v4.9.11 to latest,
-It works fine and if not working in any specific version then let me know I will update the script
 
-Prerequisites as follow
-- Must have nvm installed on your machine
-- Current in use version of node need to be grater then v4.9.11
+# I have tested this script in node v16.10.0 to latest
+
+[![](https://visitcount.itsvg.in/api?id=proCoderSid&icon=0&color=6)](https://visitcount.itsvg.in)
+
+  ## 💰 You can help me by Donating
+  [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/https://www.buymeacoffee.com/procodersid) [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/https://www.patreon.com/proCoderSid) 
